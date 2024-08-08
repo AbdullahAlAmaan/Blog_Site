@@ -2,14 +2,10 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes');
-const path = require('path');
-const app = express();
-const dotenv=require('dotenv')
+const dotenv = require('dotenv');
 dotenv.config();
 
-
-app.use(express.static(path.join(__dirname, 'public')));
-
+const app = express();
 const dbURI = process.env.DB_URI;
 
 console.log('Connecting ...'); // For debugging
@@ -21,10 +17,10 @@ mongoose.connect(dbURI)
   }))
   .catch(err => console.log('MongoDB connection error:', err.message));
 
-// register view engine
+// Register view engine
 app.set('view engine', 'ejs');
 
-// middleware & static files
+// Middleware & static files
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
@@ -33,7 +29,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// routes
+// Routes
 app.get('/', (req, res) => {
   res.redirect('/blogs');
 });
@@ -42,7 +38,7 @@ app.get('/about', (req, res) => {
   res.render('about', { title: 'About' });
 });
 
-// blog routes
+// Blog routes
 app.use('/blogs', blogRoutes);
 
 // 404 page
