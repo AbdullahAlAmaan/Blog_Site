@@ -5,10 +5,16 @@ body {
   margin: 30px auto;
   padding: 0 20px;
   font-family: 'Montserrat', sans-serif;
-  background-color: #1a1a1a;
-  color: #d4d4d4;
   line-height: 1.7;
+  background-image: url('../assets/koy8.jpg'); /* Adjusted path */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-attachment: fixed;
+  /*background-color: #141414;
+   /* Fallback color in case image doesn't load */
 }
+
 
 p, h1, h2, h3, a, ul {
   margin: 0;
@@ -23,14 +29,13 @@ nav {
   justify-content: space-between;
   margin-bottom: 40px;
   padding: 15px 30px;
-  background-color: #242424;
+  background-color: rgba(0, 0, 0, 0.5); /* Set background color with opacity */
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 10px;
   z-index: 1000;
 }
-
 
 nav ul {
   display: flex;
@@ -45,16 +50,17 @@ nav li {
 nav h1 {
   font-size: 2.2em;
   font-weight: 600;
-  color: #ffffff;
+  color: #ffffff; /* Text color remains fully opaque */
   transition: color 0.3s ease;
 }
 
 nav a {
-  color: #a8a8a8;
+  color: #a8a8a8; /* Text color remains fully opaque */
   font-weight: 400;
   font-size: 1.1em;
   transition: color 0.3s ease;
 }
+
 
 nav a:hover {
   color: #f05454;
@@ -67,7 +73,8 @@ footer {
   font-size: 0.9em;
   padding: 20px 0;
   border-top: 1px solid #333;
-  background-color: #242424;
+  background-color: #141414;
+  border-radius: 12px;
 }
 
 /* typography */
@@ -75,7 +82,7 @@ h2 {
   margin-bottom: 20px;
   font-size: 2.4em;
   font-weight: 600;
-  color: #f05454;
+  color: #fff706;
   border-bottom: 2px solid #f05454;
   display: inline-block;
 }
@@ -89,7 +96,7 @@ h3 {
 .content {
   margin-left: 0;
   padding: 20px;
-  background-color: #242424;
+  background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
 }
@@ -99,7 +106,7 @@ h3 {
   display: block;
   margin: 30px 0;
   padding: 20px;
-  background-color: #333;
+  background-color: rgba(53, 53, 53, 0.8);
   border-left: 4px solid #f05454;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -124,7 +131,7 @@ h3 {
 /* details styles */
 .details {
   padding: 20px;
-  background-color: #242424;
+  background-color: rgba(0, 0, 0, 0.5);;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -149,7 +156,7 @@ h3 {
 .create-blog form {
   max-width: 500px;
   margin: 0 auto;
-  background-color: #242424;
+  background-color: rgba(0, 0, 0, 0.5);;
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -158,21 +165,22 @@ h3 {
 .create-blog input,
 .create-blog textarea {
   display: block;
-  width: 100%;
+  width: calc(100% - 24px); /* Ensure full width with padding */
   margin: 15px 0;
   padding: 12px;
   font-size: 1em;
-  border: 1px solid #333;
+  border: 1px solid #444; /* Slightly lighter border */
   border-radius: 5px;
-  background-color: #333;
+  background-color: #222222; /* Lighter background for input fields */
   color: #d4d4d4;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 .create-blog input:focus,
 .create-blog textarea:focus {
   outline: none;
   border-color: #f05454;
-  background-color: #444;
+  background-color: #2b2a2a;
 }
 
 .create-blog label {
@@ -187,7 +195,7 @@ textarea {
 
 .create-blog button {
   margin-top: 20px;
-  background: #f05454;
+  background: #de0c0c;
   color: white;
   padding: 10px 16px;
   border: 0;
@@ -198,6 +206,91 @@ textarea {
 }
 
 .create-blog button:hover {
-  background-color: #ff6b6b;
+  background-color: #f04b4b;
   transform: translateY(-2px);
+}
+form {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: rgba(22, 22, 22, 0.8);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+form h2 {
+  margin-bottom: 20px;
+  font-size: 2.4em;
+  font-weight: 600;
+  color: #fff706;
+  border-bottom: 2px solid #f05454;
+  display: inline-block;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #d4d4d4;
+}
+
+form input {
+  display: block;
+  width: calc(100% - 24px); /* Ensure full width with padding */
+  margin-bottom: 20px;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: rgb(50, 49, 49,0.5);
+  color: #d4d4d4;
+  box-sizing: border-box;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #e20a0a;
+  background-color: #2a2a2a;
+}
+
+form button {
+  display: block;
+  width: 95%;
+  background-color: #e40000;
+  color: white;
+  padding: 14px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 50px;
+}
+
+form button:hover {
+  background-color: #ea4848;
+  transform: translateY(-2px);
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.9em;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+.constant{
+  font-size: 3.2em;
+  font-weight: 900;
+  color: #ffffff;
+  display: inline-block;
+}
+.icon{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  margin-top: -10px;
+
 }

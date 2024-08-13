@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes');
+const authRoutes = require('./routes/authRoutes');
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.set('view engine', 'ejs');
 
 // Middleware & static files
 app.use(express.static('public'));
+app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use((req, res, next) => {
@@ -40,6 +42,10 @@ app.get('/about', (req, res) => {
 
 // Blog routes
 app.use('/blogs', blogRoutes);
+
+// Auth Routes
+
+app.use(authRoutes)
 
 // 404 page
 app.use((req, res) => {
