@@ -96,7 +96,14 @@ h3 {
 .content {
   margin-left: 0;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(21, 21, 21, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+.content-1 {
+  margin-left: 0;
+  padding: 20px;
+  background-color: rgba(65, 65, 65, 0.5);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
 }
@@ -106,7 +113,7 @@ h3 {
   display: block;
   margin: 30px 0;
   padding: 20px;
-  background-color: rgba(53, 53, 53, 0.8);
+  background-color: rgba(59, 59, 59, 0.8);
   border-left: 4px solid #f05454;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -131,7 +138,7 @@ h3 {
 /* details styles */
 .details {
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);;
+  background-color: rgba(19, 19, 19, 0.5);;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -140,7 +147,7 @@ h3 {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 15px;
-  background-color: #f05454;
+  background-color: #e22020;
   color: white;
   border-radius: 5px;
   font-size: 0.9em;
@@ -171,7 +178,7 @@ h3 {
   font-size: 1em;
   border: 1px solid #444; /* Slightly lighter border */
   border-radius: 5px;
-  background-color: #222222; /* Lighter background for input fields */
+  background-color: #313131; /* Lighter background for input fields */
   color: #d4d4d4;
   box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
@@ -212,7 +219,7 @@ textarea {
 form {
   max-width: 500px;
   margin: 50px auto;
-  background-color: rgba(22, 22, 22, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -242,7 +249,7 @@ form input {
   font-size: 1em;
   border: 1px solid #444;
   border-radius: 5px;
-  background-color: rgb(50, 49, 49,0.5);
+  background-color: #313131;
   color: #d4d4d4;
   box-sizing: border-box;
 }

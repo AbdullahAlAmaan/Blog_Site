@@ -27,5 +27,5 @@ userSchema.pre('save', async function(next){
   this.password=await bcrypt.hash(this.password,salt)
 
 })
-const User= mongoose.model('user',userSchema);// this is the creation, where there will be a user that will adopt the properties
+const User= mongoose.model('user',userSchema,'users');// this is the creation, where there will be a user that will adopt the properties
 module.exports=User;
