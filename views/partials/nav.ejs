@@ -1,13 +1,18 @@
-<nav>
-  <div class="site-title">
-    <img src="/assets/blog_17029600.png" alt="Blog Image" class="icon"/>
-    <a href="/"><h1 class="constant">Blog Site</h1></a>
-  </div>
-  <ul>
-    <li><a href="/">Blogs</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/blogs/create">New Blog</a></li>
-    <li><a href="/signup">Sign Up</a></li>
-    <li><a href="/login">Login</a></li>
-  </ul>
-</nav>
+  <nav>
+    <div class="site-title">
+      <img src="/assets/blog_17029600.png" alt="Blog Image" class="icon"/>
+      <a href="/"><h1 class="constant">Blog Site</h1></a>
+    </div>
+    <ul>
+      <li><a href="/blogs">Blogs</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blogs/create">New Blog</a></li>
+      <% if (!user) { %>
+        <li><a href="/signup">Sign Up</a></li>
+        <li><a href="/login">Login</a></li>
+      <% } else { %>
+        <li><a href="/logout">Logout</a></li>
+      <% } %>
+      
+    </ul>
+  </nav>  

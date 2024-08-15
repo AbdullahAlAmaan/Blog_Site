@@ -29,3 +29,14 @@
 // server.listen(3000,()=>{
 //   console.log("hello")
 // })
+// Render the homepage with blogs
+// app.get('/', requireAuth, async (req, res) => {
+//   try {
+//     const blogs = await Blog.find().sort({ createdAt: -1 });
+//     res.render('index', { title: 'Home', blogs });
+//   } catch (err) {
+//     console.log(err);
+//     res.render('index', { title: 'Home', blogs: [] }); // Ensure blogs is always passed
+//   }
+// });
+// // Ensure that this route renders the blogs page with the blogs data

@@ -23,7 +23,7 @@ p, h1, h2, h3, a, ul {
   color: #d4d4d4;
 }
 
-/* nav & footer styles */
+/* nav styles */
 nav {
   display: flex;
   justify-content: space-between;
@@ -55,7 +55,7 @@ nav h1 {
 }
 
 nav a {
-  color: #a8a8a8; /* Text color remains fully opaque */
+  color: #ffffff; /* Text color remains fully opaque */
   font-weight: 400;
   font-size: 1.1em;
   transition: color 0.3s ease;
@@ -77,7 +77,7 @@ footer {
   border-radius: 12px;
 }
 
-/* typography */
+
 h2 {
   margin-bottom: 20px;
   font-size: 2.4em;
@@ -96,14 +96,14 @@ h3 {
 .content {
   margin-left: 0;
   padding: 20px;
-  background-color: rgba(21, 21, 21, 0.5);
+  background-color: rgba(21, 21, 21, 0.3);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
 }
 .content-1 {
   margin-left: 0;
   padding: 20px;
-  background-color: rgba(65, 65, 65, 0.5);
+  background-color: rgba(48, 48, 48, 0.8);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
 }
@@ -113,14 +113,14 @@ h3 {
   display: block;
   margin: 30px 0;
   padding: 20px;
-  background-color: rgba(59, 59, 59, 0.8);
+  background-color: rgba(48, 48, 48, 0.8);
   border-left: 4px solid #f05454;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .blogs a:hover {
-  background-color: #444;
+  background-color: #535151;
   transform: scale(1.02);
 }
 
@@ -135,10 +135,10 @@ h3 {
   color: #c4c4c4;
 }
 
-/* details styles */
+
 .details {
   padding: 20px;
-  background-color: rgba(19, 19, 19, 0.5);;
+  background-color: rgba(48, 48, 48, 0.8);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
