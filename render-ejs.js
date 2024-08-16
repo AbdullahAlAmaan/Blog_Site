@@ -27,4 +27,21 @@ fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 // Write the HTML to the output file
 fs.writeFileSync(outputPath, renderedHtml);
 
-console.log('EJS file rendered successfully!');
+// Copy over static assets like CSS, JS, images, etc.
+const copyDirectory = (src, dest) => {
+  fs.mkdirSync(dest, { recursive: true });
+  fs.readdirSync(src).forEach((element) => {
+    const srcPath = path.join(src, element);
+    const destPath = path.join(dest, element);
+    if (fs.lstatSync(srcPath).isDirectory()) {
+      copyDirectory(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  });
+};
+
+// Copy public assets to dist folder
+copyDirectory(path.join(__dirname, 'public'), path.join(__dirname, 'dist'));
+
+console.log('EJS file and assets rendered successfully!');
