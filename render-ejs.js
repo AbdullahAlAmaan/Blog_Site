@@ -43,8 +43,13 @@ const copyDirectory = (src, dest) => {
 
 // Copy public assets to dist folder
 copyDirectory(path.join(__dirname, 'public'), path.join(__dirname, 'dist'));
-// Copy the _redirects file to dist directory
-fs.copyFileSync(path.join(__dirname, '_redirects'), path.join(__dirname, 'dist', '_redirects'));
 
+// Copy the _redirects file to dist directory if it exists
+const redirectsPath = path.join(__dirname, '_redirects');
+if (fs.existsSync(redirectsPath)) {
+  fs.copyFileSync(redirectsPath, path.join(__dirname, 'dist', '_redirects'));
+} else {
+  console.warn('_redirects file not found, skipping...');
+}
 
 console.log('EJS file and assets rendered successfully!');
