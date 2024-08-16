@@ -43,5 +43,8 @@ const copyDirectory = (src, dest) => {
 
 // Copy public assets to dist folder
 copyDirectory(path.join(__dirname, 'public'), path.join(__dirname, 'dist'));
+// Copy the _redirects file to dist directory
+fs.copyFileSync(path.join(__dirname, '_redirects'), path.join(__dirname, 'dist', '_redirects'));
+
 
 console.log('EJS file and assets rendered successfully!');
